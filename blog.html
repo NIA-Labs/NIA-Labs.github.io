@@ -1,11 +1,14 @@
 ---
-layout: default
+layout: minimal
+title: "Blog"
+permalink: /blog/index.html
+description: "Musings of NIA"
 ---
 
 <main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     {% for post in site.posts %}
         <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-                <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
+                <a class="datetime" href="{{ post.url | prepend: baseurl }}">
                     <meta itemprop="datePublished" content="{{post.date}}">
                     <time datetime="{{ post.date | date_to_xmlschema }}">
                         <span class="day">
@@ -17,10 +20,10 @@ layout: default
                     </time>
                 </a>
                 <div class="content">
-                    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
+                    <a href="{{ post.url | prepend: baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
                     <p class="description">
                         {{ post.content | strip_html | truncatewords:40 }}
-                        <a href="{{ post.url | prepend: site.baseurl }}" class="link">Read more about {{post.title}}</a>
+                        <a href="{{ post.url | prepend: baseurl }}" class="link">Read more about {{post.title}}</a>
                     </p>
 
                     <div class="tags">
