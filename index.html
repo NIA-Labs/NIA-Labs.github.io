@@ -1,34 +1,49 @@
----
-layout: default
----
+<html>
+<head>
+<title>No Internet Access</title>
+<style type="text/css">
+	html, body {
+	  height: 100%;
+	  width: 100%;
+	  overflow: hidden;
+	  padding: 0;
+	  margin: 0;
+	}
+	
+	#full-screen-background-image {
+	  z-index: -999;
+	  min-height: 100%;
+	  min-width: 1024px;
+	  width: 100%;
+	  height: auto;
+	  position: fixed;
+	  overflow-y: scroll;
+	  top: 0;
+	  left: 0;
+	}
+	
+	#wrapper {
+	  position: relative;
+	  width: 800px;
+	  min-height: 400px;
+	  margin: 100px auto;
+	  color: #333;
+	}
+</style>
 
-<main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-    {% for post in site.posts %}
-        <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-                <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
-                    <meta itemprop="datePublished" content="{{post.date}}">
-                    <time datetime="{{ post.date | date_to_xmlschema }}">
-                        <span class="day">
-                            {{ post.date | date: "%d" }}
-                        </span>
-                        <span class="month-year">
-                            {{ post.date | date: "%B %Y" }}
-                        </span>
-                    </time>
-                </a>
-                <div class="content">
-                    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
-                    <p class="description">
-                        {{ post.content | strip_html | truncatewords:40 }}
-                        <a href="{{ post.url | prepend: site.baseurl }}" class="link">Read more about {{post.title}}</a>
-                    </p>
+</head>
+<body>
+	<img src="nia_concept.png" id="full-screen-background-image" />
+	<h2>&nbsp;&nbsp;Members</h2>
+	<ul>
+		<li><h3><a href="http://sushant94.me">sushant94</a></h3></li>
+		<li><h3><a href="">skarthik</a></h3></li>
+		<li><h3><a href="">ajithps</a></h3></li>
+		<li><h3><a href="https://chinmaydd.github.io/">chinmay_dd</a></h3></li>
+		<li><h3><a href="https://kbhat95.github.io/">kbhat</a></h3></li>
+	</ul>
+	<h2>&nbsp;&nbsp;Blog</h2>
+	<h2>&nbsp;&nbsp;CTFtime</h2>
 
-                    <div class="tags">
-                        {% for tag in post.tags %}
-                            <a href="{{ baseurl }}/tags/#{{tag}}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-        </article>
-    {% endfor %}
-</main>
+</body>
+</html>
