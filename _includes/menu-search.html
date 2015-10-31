@@ -15,6 +15,7 @@
 <nav id="navigation">
   <h2>MENU</h2>
   <ul>
+    <li><a href="{{ site.url }}">Home</a></li>
     {% for link in site.links %}
       <li><a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a></li>
     {% endfor %}

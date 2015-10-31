@@ -2,7 +2,7 @@
 layout: minimal
 title: "Blog"
 permalink: /blog/index.html
-description: "Musings of NIA"
+description: ""
 ---
 
 <main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
@@ -23,7 +23,7 @@ description: "Musings of NIA"
                     <a href="{{ post.url | prepend: baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
                     <p class="description">
                         {{ post.content | strip_html | truncatewords:40 }}
-                        <a href="{{ post.url | prepend: baseurl }}" class="link">Read more about {{post.title}}</a>
+                        <!-- <a href="{{ post.url | prepend: baseurl }}" class="link">Read more about {{post.title}}</a> -->
                     </p>
 
                     <div class="tags">

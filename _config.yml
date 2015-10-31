@@ -29,13 +29,9 @@ compress_html:
 # Links to include in menu navigation
 # For external links add external: true
 links:
-  - title: Home
-    url: /
-  - title: Series
-    url: /series
   - title: Tags
     url: /tags
-  - title: About Me
+  - title: About Us
     url: /about
   - title: Blog
     url: /blog
