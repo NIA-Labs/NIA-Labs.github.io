@@ -1,0 +1,1 @@
+Send an email to join.no.internet.access@gmail.com with the subject 'Join!'.

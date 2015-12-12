@@ -35,5 +35,7 @@ links:
     url: /about
   - title: Blog
     url: /blog
+  - title: Join
+    url: /join
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
